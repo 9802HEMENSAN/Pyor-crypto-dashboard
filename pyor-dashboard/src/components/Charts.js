@@ -4,7 +4,10 @@ import * as echarts from "echarts";
 const EChartComponent = ({ item, apiEndpoints, index }) => {
   const chartRef = useRef(null);
   let data = item?.prices?.map((entry) => ({
-    name:  new Date(entry[0]).toLocaleString('en-US', { month: 'long', year: 'numeric' }),
+    name: new Date(entry[0]).toLocaleString("en-US", {
+      month: "long",
+      year: "numeric",
+    }),
     value: entry[1],
   }));
 
@@ -38,9 +41,22 @@ const EChartComponent = ({ item, apiEndpoints, index }) => {
   }, []);
 
   return (
-    <div>
-      <h2 style={{ textAlign : "center" }}>E-Chart of {apiEndpoints[index]}</h2>
-      <div ref={chartRef} style={{ width: "100%", height: "400px", color : "white" }}></div>
+    <div
+      style={{
+        backgroundColor: "#04143d",
+        width: "90%",
+        border : "2px solid yellow",
+        margin : "auto",
+        padding : "10px"
+      }}
+    >
+      <h2 style={{ textAlign: "center", color: "#ff9933" }}>
+        E-Chart of {apiEndpoints[index]}
+      </h2>
+      <div
+        ref={chartRef}
+        style={{ width: "100%", height: "400px" }}
+      ></div>
     </div>
   );
 };

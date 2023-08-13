@@ -36,9 +36,10 @@ const DashBoard = ({ apiEndpoints = [] }) => {
   }, [apiEndpoints.length]);
 
   return (
-    <div  >
-      <h1 style={{ textAlign : "center" }}>Pyor Crypto Dashboard</h1>
-      <div style={{ marginTop : "50px"}}>
+    <div >
+        <h1 style={{ textAlign : "center" , position : 'sticky' , top : "100px", zIndex: 120 , backgroundColor : "#04143d", padding : "10px" }}>Pyor Crypto Dashboard</h1>
+    
+      <div>
         {data.length > 0 ?
           data?.map((item, index) => (
             <EChartComponent
@@ -48,8 +49,8 @@ const DashBoard = ({ apiEndpoints = [] }) => {
               item={item}
             />
           )) :   
-          <div style={{ display : "flex", justifyContent : "center", alignItems : "center", marginTop : "10px"  }}>
-            <img  height = "500px" width="50%" src="https://media0.giphy.com/media/NhWZxXB1zoMapS1jtN/giphy.gif?cid=ecf05e47vw5xz3g82rkuc7t2mghyhmew0vexw0acsknuzroj&ep=v1_gifs_search&rid=giphy.gif&ct=g" />
+          <div style={{ display : "flex", justifyContent : "center", alignItems : "center" }}>
+            <img  height = "700px" width="100%" src="https://i.pinimg.com/originals/9b/70/57/9b7057e2316b9f623e24485d604c644e.gif" />
           </div> 
         }
       </div>

@@ -54,7 +54,7 @@ export default function MultipleSelectChip({BitCoins, setBitCoins}) {
  
  
   return (
-    <div style={{ display:"flex", justifyContent: "center",alignItems : "center"}}>
+    <div style={{ display:"flex", justifyContent: "center",alignItems : "center", padding : "20px", position : "sticky", top :"0px" ,  zIndex: 100, backgroundColor : "#04143d"   }}>
       <FormControl sx={{ m: 1, width: "100%", color : "white" , backgroundColor : "#010714"}}>
 
         <InputLabel id="demo-multiple-chip-label" 
@@ -75,7 +75,7 @@ export default function MultipleSelectChip({BitCoins, setBitCoins}) {
             >
               {selected.map((value) => (
                 <Chip key={value} label={value}  
-                sx={{ backgroundColor : "whitesmoke" }}
+                sx={{ backgroundColor : "#ff9958", fontWeight : "bold" , fontSize : "16px"}}
                 onDelete={() =>
                   setBitCoins(
                     BitCoins.filter((item) => item !== value)
@@ -103,7 +103,9 @@ export default function MultipleSelectChip({BitCoins, setBitCoins}) {
             </MenuItem>
           ))}
         </Select>
+        
       </FormControl>
+      
     </div>
   );
 }
