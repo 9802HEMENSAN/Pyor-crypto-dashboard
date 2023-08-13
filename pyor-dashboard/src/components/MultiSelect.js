@@ -52,7 +52,7 @@ export default function MultipleSelectChip({BitCoins, setBitCoins}) {
   return (
     <div style={{ display:"flex", justifyContent: "center",alignItems : "center"}}>
       <FormControl sx={{ m: 1, width: "100%", color : "white" , backgroundColor : "#010714"}}>
-        <InputLabel id="demo-multiple-chip-label">Chip</InputLabel>
+        <InputLabel id="demo-multiple-chip-label" style={{ color: 'white' }} > Select coins to see Charts</InputLabel>
         <Select
         style={{ border : "1px solid white"}}
           labelId="demo-multiple-chip-label"
