@@ -34,6 +34,7 @@ function getStyles(name, personName, theme) {
 
  
  
+ 
 
 export default function MultipleSelectChip({BitCoins, setBitCoins}) {
   const theme = useTheme();
@@ -48,13 +49,15 @@ export default function MultipleSelectChip({BitCoins, setBitCoins}) {
       typeof value === 'string' ? value.split(',') : value,
     );
   };
+
+ 
  
   return (
     <div style={{ display:"flex", justifyContent: "center",alignItems : "center"}}>
       <FormControl sx={{ m: 1, width: "100%", color : "white" , backgroundColor : "#010714"}}>
         <InputLabel id="demo-multiple-chip-label" style={{ color: 'white' }} > Select coins to see Charts</InputLabel>
         <Select
-        style={{ border : "1px solid white"}}
+          style={{ border : "1px solid white"}}
           labelId="demo-multiple-chip-label"
           id="demo-multiple-chip"
           multiple
@@ -69,14 +72,14 @@ export default function MultipleSelectChip({BitCoins, setBitCoins}) {
               {selected.map((value) => (
                 <Chip key={value} label={value}  
                 sx={{ backgroundColor : "whitesmoke" }}
-                />
+                ></Chip>
               ))}
             </Box>
           )}
           MenuProps={MenuProps}
           
         >
-          {names.map((name) => (
+          {names?.map((name) => (
             <MenuItem
               key={name}
               value={name}

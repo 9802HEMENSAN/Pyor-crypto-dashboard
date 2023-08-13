@@ -38,9 +38,9 @@ const DashBoard = ({ apiEndpoints = [] }) => {
   return (
     <div  >
       <h1 style={{ textAlign : "center" }}>Pyor Crypto Dashboard</h1>
-      <div >
+      <div style={{ marginTop : "50px"}}>
         {data.length > 0 ?
-          data.map((item, index) => (
+          data?.map((item, index) => (
             <EChartComponent
               key={Date.now() + Math.random()}
               apiEndpoints={apiEndpoints}
