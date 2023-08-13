@@ -2,7 +2,7 @@
 
 <div style="display: flex; align-items: center;" >
    <div style="flex: 1;" >
-   ![loading-coin](https://github.com/9802HEMENSAN/Pyor-crypto-dashboard/assets/111531676/8ac7d522-e5ab-4302-adb0-4d4a563e3123)
+      <img src="./pyor-dashboard/src/Images/loading.gif"/>
    </div>
    <div style="flex: 2;" >
    Welcome to the Pyor Crypto Dashboard application! This application allows you to visualize and track the price data of various cryptocurrencies using Apache ECharts. You can create customizable dashboard pages with line-chart components that display price trends over different time periods for different coins.
