@@ -47,8 +47,9 @@ const DashBoard = ({ apiEndpoints = [] }) => {
               index={index}
               item={item}
             />
-          )) :   <div style={{ display : "flex", justifyContent : "center", alignItems : "center", marginTop : "150px"}}>
-            <img  height="200px" width="200px"src="https://user-images.githubusercontent.com/111531676/260286924-6641bc36-9128-4b28-a327-23242e318d6b.gif" />
+          )) :   
+          <div style={{ display : "flex", justifyContent : "center", alignItems : "center", marginTop : "10px"  }}>
+            <img  height = "500px" width="50%" src="https://media0.giphy.com/media/NhWZxXB1zoMapS1jtN/giphy.gif?cid=ecf05e47vw5xz3g82rkuc7t2mghyhmew0vexw0acsknuzroj&ep=v1_gifs_search&rid=giphy.gif&ct=g" />
           </div> 
         }
       </div>
