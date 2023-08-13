@@ -1,7 +1,6 @@
 import EChartComponent from "@/components/Charts";
 import React, { useState, useEffect } from "react";
  
-
 const DashBoard = ({ apiEndpoints = [] }) => {
   //   const apiEndpoints = ['ethereum', 'dogecoin', 'solana'];
 
@@ -39,13 +38,8 @@ const DashBoard = ({ apiEndpoints = [] }) => {
   return (
     <div  >
       <h1 style={{ textAlign : "center" }}>Pyor Crypto Dashboard</h1>
-      <div sx={{
-        display : "grid",
-        gridTemplateColumns: "repeat(1,1fr)",
-        gap : "10px"
-
-      }}>
-        {data.length > 0 &&
+      <div >
+        {data.length > 0 ?
           data.map((item, index) => (
             <EChartComponent
               key={Date.now() + Math.random()}
@@ -53,7 +47,10 @@ const DashBoard = ({ apiEndpoints = [] }) => {
               index={index}
               item={item}
             />
-          ))}
+          )) :   <div style={{ display : "flex", justifyContent : "center", alignItems : "center", marginTop : "150px"}}>
+            <img  height="200px" width="200px"src="https://user-images.githubusercontent.com/111531676/260286924-6641bc36-9128-4b28-a327-23242e318d6b.gif" />
+          </div> 
+        }
       </div>
     </div>
   );
