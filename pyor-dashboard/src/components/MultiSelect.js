@@ -7,6 +7,7 @@ import MenuItem from '@mui/material/MenuItem';
 import FormControl from '@mui/material/FormControl';
 import Select from '@mui/material/Select';
 import Chip from '@mui/material/Chip';
+import CancelIcon from "@mui/icons-material/Cancel";
 
 const ITEM_HEIGHT = 48;
 const ITEM_PADDING_TOP = 8;
@@ -55,7 +56,10 @@ export default function MultipleSelectChip({BitCoins, setBitCoins}) {
   return (
     <div style={{ display:"flex", justifyContent: "center",alignItems : "center"}}>
       <FormControl sx={{ m: 1, width: "100%", color : "white" , backgroundColor : "#010714"}}>
-        <InputLabel id="demo-multiple-chip-label" style={{ color: 'white' }} > Select coins to see Charts</InputLabel>
+
+        <InputLabel id="demo-multiple-chip-label" 
+        style={{ color: 'white' }} > Select coins to see Charts</InputLabel>
+
         <Select
           style={{ border : "1px solid white"}}
           labelId="demo-multiple-chip-label"
@@ -72,7 +76,17 @@ export default function MultipleSelectChip({BitCoins, setBitCoins}) {
               {selected.map((value) => (
                 <Chip key={value} label={value}  
                 sx={{ backgroundColor : "whitesmoke" }}
-                ></Chip>
+                onDelete={() =>
+                  setBitCoins(
+                    BitCoins.filter((item) => item !== value)
+                  )
+                }
+                deleteIcon={
+                  <CancelIcon
+                    onMouseDown={(event) => event.stopPropagation()}
+                  />
+                }
+                />
               ))}
             </Box>
           )}
