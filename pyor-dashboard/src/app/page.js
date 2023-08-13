@@ -5,14 +5,12 @@ import DashBoard from '@/Pages/Dashboard';
 
 export default function Home() {
   const [BitCoins, setBitCoins] = useState([])
-
   console.log(BitCoins);
 
-
   return (
-    <main  >
+    <main style={{ backgroundColor : "#04143d", minHeight: "100vh" , color : "white"}}>
         <MultipleSelectChip BitCoins={BitCoins} setBitCoins={setBitCoins}/>
-       <DashBoard  apiEndpoints={BitCoins}/>
+        <DashBoard  apiEndpoints={BitCoins}/>
     </main>
   )
 }

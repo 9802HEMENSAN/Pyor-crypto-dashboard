@@ -37,12 +37,13 @@ const DashBoard = ({ apiEndpoints = [] }) => {
   }, [apiEndpoints.length]);
 
   return (
-    <div>
-      <h1>DashBoard</h1>
-      <div style={{
+    <div  >
+      <h1 style={{ textAlign : "center" }}>Pyor Crypto Dashboard</h1>
+      <div sx={{
         display : "grid",
-        gridTemplateColumns: "repeat(2,1fr)",
+        gridTemplateColumns: "repeat(1,1fr)",
         gap : "10px"
+
       }}>
         {data.length > 0 &&
           data.map((item, index) => (

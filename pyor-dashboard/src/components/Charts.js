@@ -39,8 +39,8 @@ const EChartComponent = ({ item, apiEndpoints, index }) => {
 
   return (
     <div>
-      <h2>Dashboard of {apiEndpoints[index]}</h2>
-      <div ref={chartRef} style={{ width: "100%", height: "400px" }}></div>
+      <h2 style={{ textAlign : "center" }}>E-Chart of {apiEndpoints[index]}</h2>
+      <div ref={chartRef} style={{ width: "100%", height: "400px", color : "white" }}></div>
     </div>
   );
 };
