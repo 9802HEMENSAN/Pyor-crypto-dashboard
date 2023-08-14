@@ -1,7 +1,7 @@
 # Pyor Crypto Dashboard Application
 
-<div style="display: flex;  " >
-   <div style="flex: 1;  justify-content: space-between; align-items: center; " >
+<div style="display: flex; justify-content: space-between align-items: center;" >
+   <div style="flex: 1;   " >
       <img src="./pyor-dashboard/src/Images/loading.gif"/>
    </div>
    <div style="flex: 2;" >
